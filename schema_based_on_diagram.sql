@@ -50,5 +50,20 @@ CREATE TABLE medical_join_treatments (
     CONSTRAINT fk_treatment FOREIGN KEY(treatment_id) REFERENCES treatments(id) ON DELETE CASCADE
 );
 
+-- Create an index for the medical_histories patient_id.
+CREATE INDEX medical_patie_id ON medical_histories(patient_id);
 
+-- Create an index for the invoices medical_history_id
+CREATE INDEX invo_medical_his_id ON invoices(medical_history_id);
 
+-- Create an index for the invoice_items invoice_id.
+CREATE INDEX invoice_item_inv_id ON invoice_items(invoice_id);
+
+-- Create an index for the invoice_items invoice_id.
+CREATE INDEX invoice_item_treat_id ON invoice_items(treatment_id);
+
+-- Create an index for the treatments id.
+CREATE INDEX treat_id ON treatments(id);
+
+-- Create an index for the medical history id.
+CREATE INDEX medi_his_id ON medical_histories(id);
