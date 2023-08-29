@@ -59,5 +59,11 @@ CREATE INDEX invo_medical_his_id ON invoices(medical_history_id);
 -- Create an index for the invoice_items invoice_id.
 CREATE INDEX invoice_item_inv_id ON invoice_items(invoice_id);
 
--- Create an index for the invoice_items invoice_id.
+-- Create an index for the invoice_items invotreatment__id.
 CREATE INDEX invoice_item_treat_id ON invoice_items(treatment_id);
+
+-- Create an index for the treatments id.
+CREATE INDEX treat_id ON treatments(id);
+
+-- Create an index for the medical history id.
+CREATE INDEX medi_his_id ON medical_histories(id);
